@@ -16,6 +16,8 @@ if enable_config('debug')
   $CFLAGS += " -O0 -ggdb3"
 end
 
+$CFLAGS.gsub!('-fno-tree-dce','')
+
 LIBV8_COMPATIBILITY = '~> 3.16.14'
 
 begin
